@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>JS Performance</title>
+    <script src="hamburger.js" defer></script>
+    <script src="copy.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="jslogo.png" alt="JavaScriptLogo" id="logo" />
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="tips.html">
+                        Ways to improve Performance
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reference.html">
+                        References
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <h1>JavaScript Performance</h1>
+    <p id="js-speed">&emsp;JavaScript is widely considered to be a slow language. The performance depends on many
+        different factors, but
+        it's genreally known that JavaScript is slower than languages like C, C#, C++, but faster than Python. There are
+        many <a href="tips.html" class="bhl"><strong>ways to improve JavaScript performance</strong></a> in the code.
+    </p>
+    <h2>How to measure time performance in JavaScript applications</h2>
+    <div id="row">
+        <p class="text-container">Using the <i>performance.now()</i> method, which returns a <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp" target="_blank"
+                class="bhl"><strong>DOMHighResTimeStamp</strong></a>,
+            measured in milliseconds.</p>
+        <div class="text-boxes">
+            <div class="text-box">
+                <div class="topic">performance.now() method</div>
+                <textarea id="HTMLBox" readonly>
+const t0 = performance.now ();
+for (let i = 0; i &lt; 10; i++)
+{
+    console.log(i);
+}    
+const t1 = performance.now ();
+console.log(t1 - t0, 'miliseconds');
+                </textarea>
+                <button onclick="CopyCode()"><span class="buttontext">Copy Code</span></button>
+            </div>
+        </div>
+        <img src="perfnow.png" alt="performance.now" class="images">
+        <p class="text-container">Using the <i>console.time()</i> method, which starts the timer and
+            <i>console.timeEnd()</i> ends and outputs
+            the time in milliseconds.
+        </p>
+        <div class="text-boxes">
+            <div class="text-box">
+                <div class="topic">console.time() method</div>
+                <textarea id="HTMLBox2" readonly>
+console.time('test');
+for (let i = 0; i &lt; 10; i++) {
+    console.log(i);
+}
+console.timeEnd('test');
+                </textarea>
+                <button onclick="CopyCode2()"><span class="buttontext">Copy Code</span></button>
+            </div>
+        </div>
+        <img src="time.png" alt="time.now" class="images">
+    </div>
+
+</body>
+
+</html>
