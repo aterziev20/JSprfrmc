@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <style></style>
     <title>Ways to improve Performance</title>
     <script src="hamburger.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body id="backgorund-image">
     <header>
-        <nav class="navbar">
-            <a href="index.html">
-                <img src="jslogo.png" alt="JavaScriptLogo" id="logo" />
+      <nav class="navbar">
+        <a href="index.html">
+          <div id="logo">
+            <img src="images/jslogo.png" alt="JavaScriptLogo" />
+            <div id="logoText">Performance</div>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tips.html">
+              Ways to improve Performance
             </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="tips.html">
-                        Ways to improve Performance
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacts.html">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="reference.html">
-                        References
-                    </a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"> About </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
+    <h1 id="tips-header"><span id="number">7</span> Ways to improve JavaScript Performance</h1>
     <div id="tips-container">
-        <h1> 7 Ways to improve JavaScript Performance</h1>
-        <ol>
-            <li>Reduce Activity in Loops
-                <p class="tips">In programming, loops are frequently used. Each statement in a loop, including the
-                    <i>for</i> statement, is executed for each iteration of the loop. Statements or assignments that can
-                    be placed outside the loop will make the loop run faster.
-                </p>
-            </li>
-            <li>Reduce DOM Access
-                <p class="tips">Accessing the HTML DOM is very slow, compared to other JavaScript statements.
-                    If you expect to access a DOM element several times, access it once, and use it as a local variable.
-                </p>
-            </li>
-            <li>Reduce DOM Size
-                <p class="tips">Keep the number of elements in the HTML DOM small. This will always improve page
-                    loading, and speed up rendering, especially on smaller devices. Every attempt to search the DOM
-                    (like <i>getElementsById</i>) will benefit from a smaller DOM.</p>
-            </li>
-            <li>Avoid Unnecessary Variables
-                <p class="tips">Don't create more variables than necessary, only create variables that you will use and
-                    save values to them.</p>
-            </li>
-            <li>Delay JavaScript Loading
-                <p class="tips">Putting your scripts at the bottom of the page body lets the browser load the page
-                    first. While a script is downloading, the browser will not start any other downloads. In addition
-                    all parsing and rendering activity might be blocked. Another way to improve performance is to use
-                    <i>defer</i> in the script tag. The <i>defer</i> attribute specifies that the script should be
-                    executed after the page has finished parsing, but it only works for external scripts.
-                </p>
-            </li>
-            <li>Avoid Using <i>with</i>
-                <p class="tips">Using the <i>with</i> keyword has a negative performance impact. It also clutters up
-                    JavaScriptscopes.The <i>with</i> keyword is not allowed in strict mode.</p>
-            </li>
-            <li>Delete unused lines of code
-                <p class="tips">This one should be obvious, but make sure to read your code and delete any unused lines
-                    of code.</p>
-            </li>
-        </ol>
+      <div>
+        Reduce Activity in Loops
+        <p class="tips">
+          In programming, loops are frequently used. Each statement in a loop,
+          including the <i>for</i> statement, is executed for each iteration of
+          the loop. Statements or assignments that can be placed outside the
+          loop will make the loop run faster.
+        </p>
+      </div>
+      <div>
+        Reduce DOM Access
+        <p class="tips">
+          Accessing the HTML DOM is very slow, compared to other JavaScript
+          statements. If you expect to access a DOM element several times,
+          access it once, and use it as a local variable.
+        </p>
+      </div>
+      <div>
+        Reduce DOM Size
+        <p class="tips">
+          Keep the number of elements in the HTML DOM small. This will always
+          improve page loading, and speed up rendering, especially on smaller
+          devices. Every attempt to search the DOM (like
+          <i>getElementsById</i>) will benefit from a smaller DOM.
+        </p>
+      </div>
+      <div>
+        Avoid Unnecessary Variables
+        <p class="tips">
+          Don't create more variables than necessary, only create variables that
+          you will use and save values to them.
+        </p>
+      </div>
+      <div>
+        Delay JavaScript Loading
+        <p class="tips">
+          Putting your scripts at the bottom of the page body lets the browser
+          load the page first. While a script is downloading, the browser will
+          not start any other downloads. In addition all parsing and rendering
+          activity might be blocked. Another way to improve performance is to
+          use <i>defer</i> in the script tag. The <i>defer</i> attribute
+          specifies that the script should be executed after the page has
+          finished parsing, but it only works for external scripts.
+        </p>
+      </div>
+      <div>
+        Avoid Using <i>with</i>
+        <p class="tips">
+          Using the <i>with</i> keyword has a negative performance impact. It
+          also clutters up JavaScript scopes. The <i>with</i> keyword is not
+          allowed in strict mode.
+        </p>
+      </div>
+      <div>
+        Delete unused lines of code
+        <p class="tips">
+          This one should be obvious, but make sure to read your code and delete
+          any unused lines of code.
+        </p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
