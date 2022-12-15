@@ -47,17 +47,17 @@ a {
   margin-right: 20px;
 }
 
-#logo {
+.logo {
   display: flex;
   align-items: center;
+  margin-left: 50px;
 }
-#logo img {
+.logo img {
   width: 60px;
   height: 60px;
   margin: 20px 0px;
 }
-#logoText {
-  color: #fff;
+.logoText {
   font-size: 36px;
   padding-left: 10px;
   color: #fcdc00;
@@ -85,55 +85,6 @@ a {
   background-color: #fff;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(-45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(45deg);
-  }
-
-  .nav-menu {
-    position: absolute;
-    left: -100%;
-    gap: 0;
-    flex-direction: column;
-    background-color: black;
-    width: 90%;
-    text-align: center;
-    transition: all 0.3s;
-    margin-top: 200px;
-  }
-
-  .nav-item {
-    margin: 16px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-  #logo img {
-    width: 30px;
-    height: 30px;
-    margin: 10px 0px;
-  }
-  #logoText {
-    color: #fff;
-    font-size: 18px;
-    padding-left: 5px;
-    color: #fcdc00;
-    margin-top: 15px;
-  }
-}
 
 #indexh1 {
   margin-top: 160px;
@@ -299,7 +250,7 @@ a {
 #about {
   color: white;
   width: 40%;
-  margin: 17% 50% 0% 50%;
+  margin: 17% 50% 20% 50%;
 }
 
 #about h2 {
@@ -316,6 +267,7 @@ a {
 
 #about p {
   font-size: 18px;
+
 }
 
 #about p a {
@@ -328,16 +280,99 @@ a {
 
 .js-footer {
   background-color: black;
-  position: relative;
-  height: 100px;
-  width: 100%;
-  text-align: center;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding: 0 24px;
 }
 
 .footer {
+  display: flex;
+  margin-left: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer-logo img {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+
+.footer-logoText {
+  font-size: 14px;
+  color: #fcdc00;
+  margin: 15px 0 0 5px;
+}
+
+.footer-menu {
+  display: flex;
+  position: absolute;
+  left: 70%;
   color: white;
-  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.footer-item {
+  margin: 10px 0px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: -105%;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 90%;
+    text-align: center;
+    transition: all 0.3s;
+    margin-top: 260px;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  #logo img {
+    width: 30px;
+    height: 30px;
+    margin: 10px 0px;
+  }
+  #logoText {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 5px;
+    color: #fcdc00;
+    margin-top: 15px;
+  }
 }
