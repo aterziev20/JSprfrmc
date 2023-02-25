@@ -25,7 +25,7 @@ a {
 }
 
 .navbar {
-  min-height: 70px;
+  min-height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -322,11 +322,113 @@ a {
   margin: 10px 0px;
 }
 
+/* 4k */
+@media (min-width: 2000px) {
+  /* index.html */
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  #indexh1 {
+    font-size: 3.5rem;
+  }
+  #indexh2 {
+    font-size: 3rem;
+  }
+
+  #js-speed {
+    font-size: 2rem;
+  }
+
+  #row {
+    column-gap: 80px;
+    margin: 10% 90px;
+  }
+
+  .text-container {
+    font-size: 2rem;
+    margin: 20px 80px;
+  }
+
+  .text-boxes .text-box .topic {
+    font-size: 1.5rem;
+  }
+
+  .text-boxes .text-box textarea {
+    font-size: 1rem;
+  }
+
+  .text-boxes .text-box .buttontext {
+    font-size: 1rem;
+  }
+
+  .text-boxes .text-box .buttontext:hover {
+    transform: scale(1.1);
+  }
+
+  .text-boxes .text-box .buttontext:active {
+    scale: 0.9;
+  }
+
+  .images {
+    margin: 30px 100px;
+  }
+
+  .js-footer {
+    margin-bottom: 0;
+    height: 120%;
+  }
+
+  .footer-menu {
+    font-size: 1.2rem;
+    left: 70%;
+    gap: 50px;
+    height: 2%;
+  }
+  .footer-logo {
+    scale: 1.2;
+  }
+
+  /* tips.html */
+  #tips-header {
+    font-size: 3.5rem;
+  }
+
+  #number {
+    font-size: 100px;
+  }
+
+  #tips-container div {
+    font-size: 2.5rem;
+  }
+
+  .tips {
+    font-size: 2rem;
+  }
+  /* about.html */
+  #about h2 {
+    font-size: 5rem;
+  }
+
+  .hrLine {
+    height: 3px;
+  }
+
+  #about p {
+    font-size: 2rem;
+  }
+
+  #about p a {
+    font-size: 2rem;
+  }
+}
+
 /* mobile */
 @media (max-width: 768px) {
   /* hamburger menu */
   .hamburger {
     display: block;
+    margin-right: 10%;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -347,7 +449,7 @@ a {
     gap: 0;
     flex-direction: column;
     background-color: black;
-    width: 90.2%;
+    width: 94%;
     text-align: center;
     transition: all 0.3s ease-in-out;
     margin-top: 260px;
@@ -361,9 +463,16 @@ a {
     left: 0px;
   }
   /* navbar */
+  .logo {
+    scale: 0.8;
+  }
+
   .navbar {
-    padding: 0px;
-    margin-right: 15px;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    z-index: 100;
   }
 
   .navbar a {
@@ -372,7 +481,7 @@ a {
   }
   /* footer */
   .js-footer {
-    padding: 0 5px;
+    display: none;
   }
 
   .footer {
@@ -381,9 +490,9 @@ a {
   }
 
   .footer-menu {
-    left: 40%;
+    left: 50%;
     gap: 10px;
-    margin-right: 15px;
+    margin-top: 1.5%;
   }
 
   .footer-item {
@@ -395,16 +504,16 @@ a {
     background-attachment: fixed;
     background-position: 40% center;
   }
-  
+
   #tips-header {
     margin: 150px 10px 0 10px;
   }
-  
+
   #tips-container {
     display: block;
     margin: 50px 0 150px 0;
   }
-  
+
   #tips-container div {
     margin: 15% 10%;
   }
@@ -415,10 +524,67 @@ a {
     background-attachment: fixed;
     background-position: center 0%;
   }
-  
+
   #about {
     color: white;
     width: 70%;
     margin: 50% 0% 66% 10%;
   }
+}
+
+@media (max-width: 670px) {
+  .nav-menu {
+    left: -110%;
+    width: 95%;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-menu {
+    left: -110%;
+    width: 90%;
+    
+  }
+
+  .navbar a{
+    width: 100px;
+  }
+
+  .logo {
+    scale: 0.6;
+    margin: 0;
+    margin-left: -5%;
+  }
+
+  .text-boxes {
+    height: 100%;
+    width: 250px;
+    margin: 0 0 10% 0;
+  }
+
+  .images {
+    width: 200px;
+    height: 220px;
+    margin: 10% 0;
+  }
+  
+  #js-speed {
+    margin: 10%;
+  }
+
+  .text-container {
+    margin: 20px 0px;
+  }
+  
+  .text-boxes .text-box {
+    height: 150px;
+    width: 90%;
+    max-width: 400px;
+    margin: 55px 0px;
+  }
+  
+  .text-boxes .text-box .topic {
+    margin: 0px;
+  }
+  
 }
