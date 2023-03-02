@@ -543,7 +543,7 @@ a {
   .nav-menu {
     left: -110%;
     width: 90%;
-    
+    padding-left: 0px;
   }
 
   .navbar a{
